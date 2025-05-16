@@ -1,39 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEM</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEM</title>
+  <script defer src="js/main.js"></script>
+  <script defer src="js/items.js"></script>
+  <script src="https://kit.fontawesome.com/80ca3107bb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
-    <header>
-        <h1>Daan Pronk</h1>
-    </header>
-    <div class="product-container">
-    <article class="product-container__item item">
-        <p class="item__status">available</p>
-        <img class="item__img" src="pc1.png" alt="">
-        <h2 class="item__price">$49</h2>
-        <h2 class="item__name">Gaming Pc - Wit</h2>
-        <button class="item__button">add to card</button>
-    </article>
-
-    <article class="product-container__item item">
-        <p class="item__status">not available</p>
-        <img class="item__img" src="pc2.png" alt="">
-        <h2 class="item__price">$49</h2>
-        <h2 class="item__name">Gaming Pc - Zwart</h2>
-        <button class="item__button">add to card</button>
-    </article>
-
-    <article class="product-container__item item">
-        <p class="item__status">available</p>
-        <img class="item__img" src="pc3.png" alt="">
-        <h2 class="item__price">$49</h2>
-        <h2 class="item__name">Gaming Pc - Wit</h2>
-        <button class="item__button">add to card</button>
-    </article>
+  <nav class="navbar">
+    <div class="container-nav">
+      <li>
+        <a id="status__mandje" class="button-winkel-nav" data-items="0" href="">
+          <i class="fa-solid fa-cart-shopping"></i>
+        </a>
+      </li>
+      </ul>
     </div>
+  </nav>
+  <header>
+    <h1>Daan Pronk</h1>
+  </header>
+  <div class="product-container">
+    <article class="product-container__item item">
+      <p id="status-0" class="item__status"></p>
+      <img id="img-0" class="item__img" src="" alt="">
+      <h2 id="price-0" class="item__price"></h2>
+      <h2 id="name-0" class="item__name"></h2>
+      <p id="desc-0" class="item__description"></p>
+      <button class="item__button">add to cart</button>
+      <div class="item__cart">
+        <button class="item__button__addcart">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+          </svg>
+          <span></span>
+        </button>
+        <button class="item__button__removecart">
+          <svg height="25" width="25" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 11h14v2H5z" fill="currentColor"></path>
+          </svg>
+          <span></span>
+        </button>
+      </div>
+    </article>
+
+    <article class="product-container__item item">
+      <p id="status-1" class="item__status"></p>
+      <img id="img-1" class="item__img" src="" alt="">
+      <h2 id="price-1" class="item__price"></h2>
+      <h2 id="name-1" class="item__name"></h2>
+      <p id="desc-1" class="item__description"></p>
+      <button class="item__button">add to card</button>
+      <div class="item__cart">
+        <button class="item__button__addcart">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+          </svg>
+          <span></span>
+        </button>
+        <button class="item__button__removecart">
+          <svg height="25" width="25" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 11h14v2H5z" fill="currentColor"></path>
+          </svg>
+          <span></span>
+        </button>
+      </div>
+    </article>
+
+    <article class="product-container__item item">
+      <p id="status-2" class="item__status"></p>
+      <img id="img-2" class="item__img" src="" alt="">
+      <h2 id="price-2" class="item__price"></h2>
+      <h2 id="name-2" class="item__name"></h2>
+      <p id="desc-2" class="item__description"></p>
+      <button class="item__button">add to card</button>
+      <div class="item__cart">
+        <button class="item__button__addcart">
+          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+          </svg>
+          <span></span>
+        </button>
+        <button class="item__button__removecart">
+          <svg height="25" width="25" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M5 11h14v2H5z" fill="currentColor"></path>
+          </svg>
+          <span></span>
+        </button>
+      </div>
+    </article>
+  </div>
 </body>
+
 </html>
