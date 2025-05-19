@@ -42,6 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(`img-${i}`).alt = product.name;
     document.getElementById(`price-${i}`).textContent = product.price;
     document.getElementById(`name-${i}`).textContent = product.name;
-    document.getElementById(`desc-${i}`).textContent = product.description;
+    document.getElementById(`desc-${i}`).textContent = product. description;
   }
 });
