@@ -1,0 +1,261 @@
+:root {
+  --main-bg: #f5f5f5;
+  --accent: #3b8595;
+  --dark: #333;
+  --light: #fff;
+  --font-primary: 'Oswald', sans-serif;
+  --font-secondary: 'Source Sans Pro', sans-serif;
+  --transition-fast: 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-secondary);
+  background-color: var(--main-bg);
+  color: var(--dark);
+  line-height: 1.6;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: var(--light);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  gap: 2rem;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: bold;
+  transition: color var(--transition-fast);
+}
+
+.nav__link:hover {
+  color: var(--accent);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section--info {
+  background-image: url("../img/foto_zelf1.png");
+  background-size: cover;
+  background-position: center;
+  color: grey;
+  text-align: center;
+}
+
+.section__title {
+  font-family: var(--font-primary);
+  font-size: 10rem;
+  color: white;
+}
+
+.section--skills .section__content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  max-width: 1000px;
+  align-items: center;
+}
+
+.section--skills {
+  background-image: url("../img/foto2.png");
+  background-size: cover;
+  background-position: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+.section__image {
+  max-width: 100%;
+  height: auto;
+  flex: 1;
+}
+
+.section__text {
+  flex: 1;
+  background-color: grey;
+  border-radius: 4px;
+  padding: 0.75rem;
+  min-width: 50%;
+}
+
+.section__subtitle {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+
+.section--contact{
+  background-image: url("../img/foto3.png");
+  background-size: cover;
+  background-position: center;
+  color: grey;
+  text-align: center;
+}
+
+.section--contact .form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.form__input,
+.form__textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  font-family: var(--font-secondary);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form__textarea {
+  height: 150px;
+}
+
+.form__button {
+  background: var(--accent);
+  color: var(--light);
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background var(--transition-fast);
+}
+
+.form__button:hover {
+  background: #2e6e7b;
+}
+
+.footer {
+  background: var(--dark);
+  color: var(--light);
+  text-align: center;
+  padding: 1rem;
+}
+
+.observe {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-in-out;
+}
+
+.observe.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+}
+
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background-color: var(--light);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--dark);
+  transition: all var(--transition-fast);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  color: var(--accent);
+}
+
+.contact-link i {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-link span {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .contact-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-link {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .contact-link i {
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .section--skills .section__content {
+    flex-direction: column;
+  }
+  
+  .section__title {
+    font-size: 5rem;
+  }
+  
+  .section--info,
+  .section--skills,
+  .section--contact {
+    padding: 3rem 1rem;
+  }
+  
+  .nav__list {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}

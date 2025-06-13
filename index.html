@@ -27,82 +27,35 @@
   <header>
     <h1>Daan Pronk</h1>
   </header>
-  <div class="product-container">
-    <article class="product-container__item item">
-      <p id="status-0" class="item__status"></p>
-      <img id="img-0" class="item__img" src="" alt="">
-      <h2 id="price-0" class="item__price"></h2>
-      <h2 id="name-0" class="item__name"></h2>
-      <p id="desc-0" class="item__description"></p>
-      <button class="item__button">add to cart</button>
-      <div class="item__cart">
-        <button class="item__button__addcart">
-          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
-          </svg>
-          <span></span>
-        </button>
-        <button class="item__button__removecart">
-          <svg height="25" width="25" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 11h14v2H5z" fill="currentColor"></path>
-          </svg>
-          <span></span>
-        </button>
-      </div>
+    <article class="product-container__item item" id="productTemplate" style="display: none;">
+        <p class="item__status"></p>
+        <img class="item__img" src="" alt="">
+        <h2 class="item__price"></h2>
+        <h2 class="item__name"></h2>
+        <p class="item__description"></p>
+        <button class="item__button">add to cart</button>
+        <div class="item__cart">
+            <button class="item__button__addcart">
+                <svg height="24" width="24" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
+                </svg>
+                <span>Add</span>
+            </button>
+            <button class="item__button__removecart">
+                <svg height="25" width="25" viewBox="0 0 25 20">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M5 11h14v2H5z" fill="currentColor"></path>
+                </svg>
+                <span>Remove</span>
+            </button>
+        </div>
     </article>
 
-    <article class="product-container__item item">
-      <p id="status-1" class="item__status"></p>
-      <img id="img-1" class="item__img" src="" alt="">
-      <h2 id="price-1" class="item__price"></h2>
-      <h2 id="name-1" class="item__name"></h2>
-      <p id="desc-1" class="item__description"></p>
-      <button class="item__button">add to card</button>
-      <div class="item__cart">
-        <button class="item__button__addcart">
-          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
-          </svg>
-          <span></span>
-        </button>
-        <button class="item__button__removecart">
-          <svg height="25" width="25" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 11h14v2H5z" fill="currentColor"></path>
-          </svg>
-          <span></span>
-        </button>
-      </div>
-    </article>
+    <div class="products-container" id="productsContainer"></div>
 
-    <article class="product-container__item item">
-      <p id="status-2" class="item__status"></p>
-      <img id="img-2" class="item__img" src="" alt="">
-      <h2 id="price-2" class="item__price"></h2>
-      <h2 id="name-2" class="item__name"></h2>
-      <p id="desc-2" class="item__description"></p>
-      <button class="item__button">add to card</button>
-      <div class="item__cart">
-        <button class="item__button__addcart">
-          <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor"></path>
-          </svg>
-          <span></span>
-        </button>
-        <button class="item__button__removecart">
-          <svg height="25" width="25" viewBox="0 0 25 20" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M5 11h14v2H5z" fill="currentColor"></path>
-          </svg>
-          <span></span>
-        </button>
-      </div>
-    </article>
   </div>
 </body>
 
 </html>
+

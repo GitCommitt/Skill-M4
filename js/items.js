@@ -21,3 +21,24 @@ const products = [
     description: "Een tweede witte gaming PC variant."
   }
 ];
+
+
+const template = document.getElementById('productTemplate');
+const container = document.getElementById('productsContainer');
+
+products.forEach(product => {
+    const clone = template.cloneNode(true);
+    clone.style.display = 'block';
+    
+    clone.querySelector('.item__status').textContent = product.status;
+    
+    const img = clone.querySelector('.item__img');
+    img.setAttribute('src', product.img);
+    img.setAttribute('alt', product.name);
+    
+    clone.querySelector('.item__price').textContent = product.price;
+    clone.querySelector('.item__name').textContent = product.name;
+    clone.querySelector('.item__description').textContent = product.description;
+    
+    container.appendChild(clone);
+});
