@@ -54,8 +54,8 @@
 
       </div>
           <div class="email">
-            <form class="contact-form">
-              <h2 class="form-title">Direct email</h2>
+            <form class="contact-form" onsubmit="sendMail(event)">
+              <h2 style="color: grey;" class="form-title section__subtitle">Direct email</h2>
 
               <div class="form-group">
                 <label for="name">Naam</label>
@@ -69,6 +69,8 @@
                 <label for="msg">Bericht</label>
                 <textarea id="msg" name="user_message" required></textarea>
               </div>
+              <input type="hidden" id="mailtoValue" value="Daanpronk570@gmail.com" />
+              <input type="hidden" id="mailtoccValue" value="Extra@gmail.com" />
               <div class="form-button">
                 <button type="submit">Verzenden</button>
               </div>

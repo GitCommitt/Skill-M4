@@ -15,3 +15,16 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.observe').forEach(section => {
   observer.observe(section);
 });
+
+function sendMail(event) {
+  event.preventDefault()
+  const name = document.getElementById('name').value
+  const email = document.getElementById('mail').value
+  const message = document.getElementById('msg').value
+  const mailto = document.getElementById('mailtoValue').value
+  const cc = document.getElementById('mailtoccValue').value
+  const subject = encodeURIComponent('Bericht van ' + name)
+  const body = encodeURIComponent(message + '\n\nVan: ' + name + ' (' + email + ')')
+  const mailtoLink = 'mailto:' + mailto + '?cc=' + cc + '&subject=' + subject + '&body=' + body
+  window.location.href = mailtoLink
+}
